@@ -215,17 +215,17 @@ body::-webkit-scrollbar-track {
   display: flex;
   column-gap: 90px;
  padding: 20px 30px;
- 
- overflow: hidden;
-  
+ overflow-x: hidden;
+
 }
+
 .silder-box {
-  position: relative;
   max-width: 350px;
   min-width: 350px;
   flex-grow: 1;
   flex-shrink: 1;
   min-height: 250px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -235,12 +235,15 @@ body::-webkit-scrollbar-track {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 15px;
   padding: 0px 0px;
+  transition: all 1s ease-in-out;
 }
+
 .slider-box-img {
   width: 100%;
   height: 100%;
 }
 .slider-box-content {
+
   background-color: rgb(83, 83, 83);
   position: absolute;
   top: 100%;
