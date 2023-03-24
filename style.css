@@ -3,6 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* scroll bar*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #c60311;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px -2px rgba(0, 0, 0, 0.25);
+}
+
+body::-webkit-scrollbar-track {
+  /* background: linear-gradient(90deg,#f0eff4,#eeedeb 1px,#f1eff5 0,#f3f2f5); */
+  background: linear-gradient(90deg, #0e0c13, #221d12 1px, #1e172c 0, #ddd9e4);
+}
 
 #navbar {
   /* color: whitesmoke; */
@@ -17,13 +37,20 @@
   /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
   z-index: 3;
   color: whitesmoke;
+  background-color: black;
 }
-
+.container {
+  z-index: 2;
+}
 .underline {
   display: inline;
   position: relative;
   overflow: hidden;
   margin: 0px 50px;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 18px;
+  padding: 6px 0px;
 }
 
 .underline:after {
@@ -32,7 +59,7 @@
   left: 0; /* was: right: 0 */
   width: 0;
   bottom: -5px;
-  background: #fff;
+  background: white;
   height: 4px;
   transition-property: width;
   transition-duration: 0.3s;
@@ -52,7 +79,7 @@
 
 /* Hero Sction */
 
-.heroText{
+.heroText {
   max-width: 1100px;
   display: flex;
   flex-direction: column;
@@ -78,14 +105,92 @@
   letter-spacing: 4px;
 }
 
-.heroSubText{
+.heroSubText {
   text-align: left;
   color: whitesmoke;
   max-width: 70%;
   margin-left: 70px;
   font-size: 16px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.cred{
-  color: red;
+.cred {
+  color: #c60311;
+}
+
+#service {
+  text-align: center;
+  padding: 20px 160px;
+  font-family: "Alkatra", cursive;
+  background-image: url("/images/service-bg-transformed.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.serviceCardContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-top: 50px;
+  column-gap: 100px;
+  row-gap: 50px;
+  margin-bottom: 50px;
+}
+#service h1 {
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.serviceCards {
+  border: 4px solid #c60311;
+  border-radius: 10px;
+  padding: 10px 20px;
+  max-width: 250px;
+  transition: all 330ms ease-in-out;
+  opacity: 0.6;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-color: white;
+}
+.serviceCards h4 {
+  font-size: 23px;
+  font-weight: 700;
+}
+.serviceCards p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.serviceCards:hover {
+  opacity: 1;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+#about {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 100px;
+  font-family: "Poppins", sans-serif;
+}
+.car-image img {
+  max-width: 400px;
+}
+
+.about-us h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.about-us {
+  max-width: 600px;
+}
+.about-us p {
+  font-weight: 500;
+}
+
+.contact {
+  display: flex;
+  margin: 20px 10px;
+  column-gap: 30px;
 }
