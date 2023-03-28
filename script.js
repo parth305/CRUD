@@ -77,14 +77,12 @@ for (let index = 0; index < images.length / 3; index++) {
 }
 
 let position = 0;
-// console.time("timer")
 let positionflag = false;
 let activedot = 0;
 let flag = true;
 let dotchilds = dotcontainer.childNodes;
 dotchilds[activedot].classList.toggle("active");
 setInterval(() => {
-  // console.timeLog("timer")
   if (!flag) {
     return;
   }
