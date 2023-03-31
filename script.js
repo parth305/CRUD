@@ -96,7 +96,6 @@ position-=440*3
 
   dotchilds[activedot].classList.toggle("active");
   activedot = (activedot + 1) % 3;
-  console.log(activedot);
   dotchilds[activedot].classList.toggle("active");
 }, 5000);
 
