@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+/* scroll bar*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #c60311;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px -2px rgba(0, 0, 0, 0.25);
+}
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #0e0c13, #221d12 1px, #1e172c 0, #ddd9e4);
+}
+
+#navbar {
+  margin-right: auto;
+  column-gap: 50px;
+  padding: 20px 0px;
+  padding-right: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  color: whitesmoke;
+  background-color: black;
+}
+.container {
+  z-index: 2;
+}
+.underline {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+  margin: 0px 50px;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 18px;
+  padding: 6px 0px;
+}
+
+.underline:after {
+  content: "";
+  position: absolute;
+  left: 0; /* was: right: 0 */
+  width: 0;
+  bottom: -5px;
+  background: white;
+  height: 4px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+  width: 100%;
+}
+.underline:hover {
+  cursor: pointer;
+}
+
+/* Hero Sction */
+
+.heroText {
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+}
+.heroSection {
+  content: "";
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-image: url("/images/pexels-pixabay-248747.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroTextTitle {
+  font-size: 55px;
+  color: whitesmoke;
+  font-family: "Monoton", cursive;
+  margin-left: 70px;
+  text-align: left;
+  word-spacing: 10px;
+  letter-spacing: 4px;
+}
+
+.heroSubText {
+  text-align: left;
+  color: whitesmoke;
+  max-width: 70%;
+  margin-left: 70px;
+  font-size: 16px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.cred {
+  color: #c60311;
+}
+
+#service {
+  text-align: center;
+  padding: 20px 160px;
+  padding-top: 50px;
+  font-family: "Alkatra", cursive;
+  background-image: url("/images/service-bg-transformed.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.serviceCardContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-top: 50px;
+  column-gap: 100px;
+  row-gap: 50px;
+  margin-bottom: 50px;
+}
+#service h1 {
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.serviceCards {
+  border: 4px solid #c60311;
+  border-radius: 10px;
+  padding: 10px 20px;
+  max-width: 250px;
+  transition: all 330ms ease-in-out;
+  opacity: 0.6;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-color: white;
+}
+.serviceCards h4 {
+  font-size: 23px;
+  font-weight: 700;
+}
+.serviceCards p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.serviceCards:hover {
+  opacity: 1;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+#about {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 100px;
+  font-family: "Poppins", sans-serif;
+}
+.car-image img {
+  max-width: 400px;
+}
+
+.about-us h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.about-us {
+  max-width: 600px;
+}
+.about-us p {
+  font-weight: 500;
+}
+
+.contact {
+  display: flex;
+  margin: 20px 10px;
+  column-gap: 30px;
+}
+
+#products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 50px;
+  text-align: center;
+  margin: 20px 30px;
+  padding: 20px 0px;
+}
+
+.slider-container {
+  width: 70%;
+}
+.slider-card-container {
+  display: flex;
+  column-gap: 90px;
+  padding: 20px 30px;
+  overflow-x: hidden;
+}
+
+.silder-box {
+  max-width: 350px;
+  min-width: 350px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-height: 250px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  overflow: hidden;
+  color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
+  padding: 0px 0px;
+  transition: all 1s ease-in-out;
+}
+
+.slider-box-img {
+  width: 100%;
+  height: 100%;
+}
+.slider-box-content {
+  background-color: rgb(83, 83, 83);
+  position: absolute;
+  top: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: center;
+  font-size: 24px;
+  padding: 25px 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 60%;
+}
+
+.silder-box:hover .slider-box-content {
+  top: 40%;
+  transition: all 350ms ease-in-out;
+}
+
+.silder-box:hover .slider-box-img {
+  opacity: 0.7;
+}
+
+.silder-box:hover {
+  cursor: pointer;
+}
+
+#dotcontainer {
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.dot:hover {
+  cursor: pointer;
+}
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(126, 126, 126);
+  border-radius: 50%;
+}
+.active {
+  background-color: rgb(31, 30, 30);
+  filter: blur(5px);
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.viewdetails {
+  background-color: #000;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buynow {
+  background-color: #000;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price {
+  background-color: black;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
