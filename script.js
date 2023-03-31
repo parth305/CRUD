@@ -1,11 +1,8 @@
 import { htmlTemplate, images } from "./const.js";
-console.log(images[0]);
 const div = document.createElement("div");
 div.innerHTML = htmlTemplate;
 
 div.classList.add("silder-box");
-
-
 
 let divlist = [];
 for (let i = 0; i < images.length; i++) {
@@ -35,7 +32,7 @@ setInterval(() => {
   if (!flag) {
     return;
   }
-position-=440*3
+  position -= 440 * 3;
   divlist.map((el) => {
     if (position <= -440 * images.length + 440 * 2) {
       position = 0;
@@ -58,9 +55,9 @@ container.addEventListener("mouseout", () => {
 for (let index = 0; index < dotchilds.length; index++) {
   const element = dotchilds[index];
   element.addEventListener("click", () => {
-    dotchilds[activedot].classList.toggle('active')
-    activedot=index
-    element.classList.toggle("active")
+    dotchilds[activedot].classList.toggle("active");
+    activedot = index;
+    element.classList.toggle("active");
     position = activedot - index * 3 * 440;
     divlist.map((el) => {
       el.style.transform = `translateX(${position}px)`;

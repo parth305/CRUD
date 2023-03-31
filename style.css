@@ -207,9 +207,8 @@ body::-webkit-scrollbar-track {
 .slider-card-container {
   display: flex;
   column-gap: 90px;
- padding: 20px 30px;
- overflow-x: hidden;
-
+  padding: 20px 30px;
+  overflow-x: hidden;
 }
 
 .silder-box {
@@ -236,7 +235,6 @@ body::-webkit-scrollbar-track {
   height: 100%;
 }
 .slider-box-content {
-
   background-color: rgb(83, 83, 83);
   position: absolute;
   top: 100%;
@@ -265,24 +263,24 @@ body::-webkit-scrollbar-track {
   cursor: pointer;
 }
 
-#dotcontainer{
+#dotcontainer {
   display: flex;
   column-gap: 20px;
   justify-content: center;
   margin-top: 30px;
 }
-.dot:hover{
+.dot:hover {
   cursor: pointer;
 }
-.dot{
+.dot {
   width: 15px;
   height: 15px;
   background-color: rgb(126, 126, 126);
   border-radius: 50%;
 }
-.active{
+.active {
   background-color: rgb(31, 30, 30);
-filter: blur(5px);
+  filter: blur(5px);
 }
 
 .product-info {

@@ -1,16 +1,16 @@
 export const images = [
-    "images/car-png-39057.png",
-    "images/car-png-39071.png",
-    "images/chris-barbalis-9qlSGW_LgKs-unsplash.jpg",
-    "images/dhiva-krishna-X16zXcbxU4U-unsplash.jpg",
-    "images/erik-mclean-54WyjJurNN8-unsplash.jpg",
-    "images/kevin-bhagat-3cLpiv8h5so-unsplash.jpg",
-    "images/pexels-abdulwahab-alawadhi-3422964.jpg",
-    "images/thomas-sabu-pvaA12P-6s4-unsplash.jpg",
-    "images/tim-meyer-GIm7wxiAZys-unsplash.jpg",
-  ];
+  "images/car-png-39057.png",
+  "images/car-png-39071.png",
+  "images/chris-barbalis-9qlSGW_LgKs-unsplash.jpg",
+  "images/dhiva-krishna-X16zXcbxU4U-unsplash.jpg",
+  "images/erik-mclean-54WyjJurNN8-unsplash.jpg",
+  "images/kevin-bhagat-3cLpiv8h5so-unsplash.jpg",
+  "images/pexels-abdulwahab-alawadhi-3422964.jpg",
+  "images/thomas-sabu-pvaA12P-6s4-unsplash.jpg",
+  "images/tim-meyer-GIm7wxiAZys-unsplash.jpg",
+];
 
-export const htmlTemplate=`
+export const htmlTemplate = `
 <img
   src="images/car-png-39057.png"
   alt=""
@@ -53,4 +53,4 @@ export const htmlTemplate=`
     </div>
   </div>
 </div>   
-`
+`;
